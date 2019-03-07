@@ -16,8 +16,9 @@ screen.fill(BG)
 
 tiles = []
 
-tiles.append(Tile(1,1, (255,0,0)))
-tiles.append(Tile(2,2, (0,255,0)))
+tiles.append(Tile(0,0, (0,0,255), 0))
+tiles.append(Tile(1,1, (255,0,0), 1))
+tiles.append(Tile(2,2, (0,255,0), 2))
 def tick():
     screen.fill(BG)
     for tile in tiles:
@@ -31,5 +32,5 @@ while running:
         if event.type == pygame.QUIT:
             running = False
     #30 frames per second
-    time.sleep(0.032)
+    time.sleep(0.016)
     tick()
